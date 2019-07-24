@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <form action="./Dibujar" method="GET">
+            <label for="prov">Provincia</label>
+            <h:selectOneMenu value="#{prov.provincia}" id="provincia">
+                <f:selectItem itemValue=".. Seleccione" itemLabel=".. Seleccione"/>
+                <f:selectItems value="#{prov.prov}"/>
+            </h:selectOneMenu>
+
+            <label for="prov">Año</label>
+            <h:selectOneMenu value="#{fecha.fecha}" id="fecha">
+                <f:selectItem itemValue=".. Seleccione" itemLabel=".. Seleccione"/>
+                <f:selectItems value="#{fecha.f}"/>
+            </h:selectOneMenu>
+
+            <label  for="prov">Grupo</label>
+            <h:selectOneMenu value="#{grupo.nombre}" id="grupo">
+                <f:selectItem itemValue=".. Seleccione" itemLabel=".. Seleccione"/>
+                <f:selectItems value="#{grupo.nom}"/>
+            </h:selectOneMenu>
+
+            <label  for="prov">Gastos</label>
+            <h:selectOneMenu value="valor_agregado" id="gastos">
+                <f:selectItem itemValue="valor_agregado" itemLabel="Valor Agregado"/>
+                <f:selectItem itemValue="produccion_total" itemLabel="Produccion Total"/>
+                <f:selectItem itemValue="consumo_intermedio" itemLabel="Consumo Intermedio"/>
+                <f:selectItem itemValue="total_remuneraciones" itemLabel="Total Remuneraciones"/>
+            </h:selectOneMenu>
+
+            <input type="submit" value="Consultar"/>
+        </form>
+        <style type="text/css">
+            .left {
+                text-align: left;
+            }
+
+            .right div {
+                float: right;
+            }
+
+        </style>
+
+        <h:panelGrid columns="2" columnClasses="left,right" style="width:100%" id="panel" >
+            <p:chart type="pie" model="#{chartView.pieModel1}" style="width:650px;" />
+            <p:chart type="bar" model="#{chartView.animatedModel2}" style="width:650px;" />
+        </h:panelGrid>
+
+       
+
+    </h:body>
+</html>
+
