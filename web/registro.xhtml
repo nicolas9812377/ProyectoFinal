@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Registro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <label>Registrarse</label>
+        <h:form>
+            <label>Cedula:</label>
+            <h:inputText value="#{US.cedula}" /> 
+            <label>Nombre:</label>
+            <h:inputText value="#{US.nombre}"/> 
+            <label>Apellido:</label>
+            <h:inputText value="#{US.apellido}"/> 
+            <label>Correo Electronico:</label>
+            <h:inputText value="#{US.correo}"/> 
+            <label>Contraseña:</label>
+            <h:inputSecret value="#{US.contraseña}"/>
+            <h:commandButton action="#{US.registro()}" value="Registro"/>
+        </h:form> 
+    </body>
+</html>

@@ -5,10 +5,6 @@
  */
 package com.model;
 
-import java.io.Serializable;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
-
 /**
  *
  * @author Lenovo 330S
