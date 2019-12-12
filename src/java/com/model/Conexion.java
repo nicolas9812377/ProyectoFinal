@@ -37,7 +37,7 @@ public class Conexion
 		this.driver ="org.postgresql.Driver";
 		this.user="postgres";
 		this.pwd="123456";
-		this.cadena="jdbc:postgresql://localhost:5432/sesion";
+		this.cadena="jdbc:postgresql://localhost:5432/bdd_dimencional_2013_2014";
 		this.con=this.crearConexion();
 		
 	}

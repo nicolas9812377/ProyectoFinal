@@ -33,7 +33,7 @@ public class Provincia implements Serializable{
     private List<String> prov;
 
     @PostConstruct
-    public void inicializador() { 
+    public void inicializador() {  System.out.println("Entro!!");
         setProv(new ArrayList<>());
         Conexion c = new Conexion();
         ResultSet rs = c.Consulta("SELECT * FROM dim_provincia");
